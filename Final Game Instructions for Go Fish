@@ -1,0 +1,54 @@
+Variables:
+Go Fish=Draw card
+
+Dealer:
+Each player draws one card
+Each player flips their card over
+Player with lowest card is determined as the dealer
+Cards a placed back in deck
+Card deck is shuffled
+Oldest player is determined
+Oldest player goes first
+The order is clockwise
+   :If   there are no more cards, then dealer shuffles
+
+Playing the Game:
+
+Round 1
+Each player is dealt 5 cards from the dealer
+Player1 asks any player for a random card in their hand
+:if
+   player gives card, ask any player again
+   else: go fish
+:if 
+   player1 recieves card, ask again
+   else: turn end
+Continue until player1 go fish
+Round end
+
+Round 2
+Next player goes
+Player2 ask any player for a card in their hand
+:if 
+   player2 has card that player1 asked for, then ask player1 for that card
+   else: ask any player for any card in hand
+:if
+   player gives card, ask any player again except for the same card from that player or the same card player1 asked for
+   else: go fish
+Continue until go fish
+round End
+   
+Round 3
+Player3 goes next
+Player3 asks any player for a card in their hand
+:if
+   player3 has card that player1 or player2 asked for, then ask player2 or player1 for that card 
+   else: ask any player for card in hand
+:if
+   player gives card, ask any player again except for the same cards from player2 and player1
+   else: go fish
+Round End
+
+End of game:
+Player with most decks placed out of hand face up wins
+   
